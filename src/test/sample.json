@@ -1,0 +1,107 @@
+[
+  {
+    "make": "Audi",
+    "model": "A7",
+    "vin": "09AGHY64352JITEG98K",
+    "metadata" : {
+      "Color" : "Black",
+      "Notes" : "Scratches on the front side of the car"
+    },
+    "perdayrent" : {
+      "Price" : 140,
+      "Discount" : 15
+    },
+    "metrics" : {
+      "yoymaintenancecost" : 2190.76,
+      "depreciation": 2256.43,
+      "rentalcount" : {
+        "lastweek" : 4,
+        "yeartodate" : 221
+      }
+    }
+  },
+  {
+    "make": "Tesla",
+    "model": "S",
+    "vin": "09DSEY64352JITEG98K",
+    "metadata" : {
+      "Color" : "Black",
+      "Notes" : "Scratches on the front side of the car"
+    },
+    "perdayrent" : {
+      "Price" : 130,
+      "Discount" : 5
+    },
+    "metrics" : {
+      "yoymaintenancecost" : 2503.56,
+      "depreciation": 1110.43,
+      "rentalcount" : {
+        "lastweek" : 2,
+        "yeartodate" : 150
+      }
+    }
+  },
+  {
+    "make": "Tesla",
+    "model": "S",
+    "vin": "1234",
+    "metadata" : {
+      "Color" : "Blue",
+      "Notes" : "Note1"
+    },
+    "perdayrent" : {
+      "Price" : 250,
+      "Discount" : 30
+    },
+    "metrics" : {
+      "yoymaintenancecost" : 3380.76,
+      "depreciation": 1256.49,
+      "rentalcount" : {
+        "lastweek" : 2,
+        "yeartodate" : 180
+      }
+    }
+  },
+  {
+    "make": "Tesla",
+    "model": "S",
+    "vin": "1235",
+    "metadata" : {
+      "Color" : "Blue",
+      "Notes" : "Note2"
+    },
+    "perdayrent" : {
+      "Price" : 234,
+      "Discount" : 24
+    },
+    "metrics" : {
+      "yoymaintenancecost" : 3120,
+      "depreciation": 2530.43,
+      "rentalcount" : {
+        "lastweek" : 1,
+        "yeartodate" : 280
+      }
+    }
+  },
+  {
+    "make": "Tesla",
+    "model": "S",
+    "vin": "1236",
+    "metadata" : {
+      "Color" : "Blue",
+      "Notes" : "Note3"
+    },
+    "perdayrent" : {
+      "Price" : 250,
+      "Discount" : 15
+    },
+    "metrics" : {
+      "yoymaintenancecost" : 3210.32,
+      "depreciation": 2869.11,
+      "rentalcount" : {
+        "lastweek" : 5,
+        "yeartodate" : 150
+      }
+    }
+  }
+]
