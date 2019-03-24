@@ -73,6 +73,10 @@ public class Car {
         return perdayrent.price * metrics.rental_count.year_to_date - cost;
     }
 
+    public Float getCarDiscountedPrice(){
+        return perdayrent.price - perdayrent.discount;
+    }
+
     public String DebugString() {
         return "Vin " + vin + " Make: " + make + " Model: " + model;
     }

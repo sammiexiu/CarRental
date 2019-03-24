@@ -38,7 +38,7 @@ public class SolutionTest {
 
     @Before
     public void setUp() throws Exception {
-        cars = LoadResponse("//Users/sammiexiu/Desktop/javaProjects/src/test/sample.json");
+        cars = LoadResponse("./src/test/sample.json");
     }
 
     @After
@@ -48,17 +48,29 @@ public class SolutionTest {
 
     @Test
     public void getHighestRevenueCar() throws Exception {
-
+        ArrayList<Car> actual = Solution.GetHighestRevenueCar(cars);
+        int size = actual.size();
+        String first = actual.get(0).vin;
+        Assert.assertEquals(1, size);
+        Assert.assertEquals("1235", first);
     }
 
     @Test
     public void getLowestDailyRentalAfterDiscount() throws Exception {
-
+        ArrayList<Car> actual = Solution.GetLowestDailyRentalAfterDiscount(cars);
+        int actual_size = actual.size();
+        double actual_lowest_price = actual.get(0).getCarDiscountedPrice();
+        Assert.assertEquals(2, actual_size);
+        Assert.assertEquals(125.0, actual_lowest_price, 0.0001);
     }
 
     @Test
     public void getLowestDailyRental() throws Exception {
-
+        ArrayList<Car> actual = Solution.GetLowestDailyRental(cars);
+        int actual_size = actual.size();
+        double actual_lowest_price = actual.get(0).perdayrent.price;
+        Assert.assertEquals(1, actual_size);
+        Assert.assertEquals(130.0, actual_lowest_price, 0.0001);
     }
 
     @Test

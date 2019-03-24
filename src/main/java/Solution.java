@@ -8,11 +8,33 @@ import java.util.ArrayList;
 
 public class Solution {
 
+    public void PrintAnsToQuestion1(ArrayList<Car> cars) {
+        ArrayList<Car> blueTeslas = GetBlueTeslas(cars);
+        for (Car car : blueTeslas) {
+            System.out.println( " Make: " + car.make + " Color: " + car.metadata.color + "Vin: " + car.vin);
+        }
+        return;
+    }
+
+    public ArrayList<Car> AnsToQuestion2a(ArrayList<Car> cars) {
+        return GetLowestDailyRental(cars);
+    }
+
+    public ArrayList<Car> AnsToQuestion2b(ArrayList<Car> cars) {
+        return GetLowestDailyRentalAfterDiscount(cars);
+    }
+
+    public ArrayList<Car> AnsToQuestion3(ArrayList<Car> cars) {
+        return GetHighestRevenueCar(cars);
+    }
+
     public static ArrayList<Car> GetHighestRevenueCar(ArrayList<Car> cars) {
         ArrayList<Car> highest_profit_cars =  new ArrayList<Car>();
         ArrayList<Float> profits = new ArrayList<Float>();
         for (Car car: cars) {
-            profits.add(car.getCarRevenue());
+            Float profit = car.getCarRevenue();
+            profits.add(profit);
+            System.out.println(car.vin + " Profit: " + profit);
         }
 
         Float hightest_profit = profits.get(0);
@@ -37,8 +59,9 @@ public class Solution {
 
         // get the discouted prices of all cars
         for (Car car: cars) {
-            Float discounted_price = car.perdayrent.price - car.perdayrent.discount;
+            Float discounted_price = car.getCarDiscountedPrice();
             prices_after_distcount.add(discounted_price);
+            System.out.println(car.vin + " Discounted Price: " + discounted_price);
         }
 
         Float lowest_price = prices_after_distcount.get(0);
@@ -49,7 +72,7 @@ public class Solution {
         }
 
         for (Car car : cars) {
-            Float discounted_price = car.perdayrent.price - car.perdayrent.discount;
+            Float discounted_price = car.getCarDiscountedPrice();
             if (discounted_price.equals(lowest_price)) {
                 lowest_discounted_price_cars.add(car);
             }
@@ -64,7 +87,9 @@ public class Solution {
 
         // get the prices of all cars
         for (Car car: cars) {
-            prices.add(car.perdayrent.price);
+            Float price = car.perdayrent.price;
+            prices.add(price);
+            System.out.println(car.vin + " Price: " + price);
         }
 
         Float lowest_price = prices.get(0);
@@ -75,7 +100,8 @@ public class Solution {
         }
 
         for (Car car : cars) {
-            if (car.perdayrent.price == lowest_price) {
+            Float price = car.perdayrent.price;
+            if (price.equals(lowest_price)) {
                 lowest_price_cars.add(car);
             }
         }
@@ -94,10 +120,4 @@ public class Solution {
         return blueTeslas;
     }
 
-    public void PrintAnsToQuestion1(ArrayList<Car> blueTeslas) {
-        for (Car car: blueTeslas) {
-            System.out.println( " Make: " + car.make + " Color: " + car.metadata.color + "Vin: " + car.vin);
-        }
-            }
-    
 }
